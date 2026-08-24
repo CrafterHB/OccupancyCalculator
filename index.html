@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A basic starting page for the Firemen Thing project"
+    />
+    <title>Firemen Thing</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="home">
+      <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">Inspector-Occupancy Calculations</h2>
+        <p>A tool to calculate occupancy readiness.</p>
+      </section>
+
+      <section id="form">
+        <form>
+          <h2 class="form__header">Dimensions:</h2>
+          <div class="form__element">
+            <label for="length">Length:</label>
+            <input type="number" id="length" min="1" required />
+          </div>
+          <div class="form__element">
+            <label for="width">Width:</label>
+            <input type="number" id="width" min="1" required />
+          </div>
+
+          <h2 class="form__header">Occupancy Use:</h2>
+          <div class="form__element">
+            <input
+              type="radio"
+              id="form__tc-option"
+              name="occupancy-use"
+              value="15"
+              required
+            />
+            <label for="form__tc-option">Tables(rounds) and Chairs</label><br />
+            <input
+              type="radio"
+              id="form__chairs-option"
+              name="occupancy-use"
+              value="7"
+            />
+            <label for="form__chairs-option"
+              >Rows of chairs (if over 200 banded together)</label
+            ><br />
+            <input
+              type="radio"
+              id="form__standing-option"
+              name="occupancy-use"
+              value="5"
+            />
+            <label for="form__standing-option">People only (standing)</label>
+          </div>
+
+          <h2 class="form__header">Exit Footage:</h2>
+          <div class="form__element">
+            <label for="exit-footage"
+              >Total Footage of Exits in the Venue:</label
+            >
+            <input type="number" id="exit-footage" min="1" required />
+          </div>
+
+          <h2 class="form__header">Total Footage of Exits in the Venue:</h2>
+          <div class="form__element">
+            <input
+              type="radio"
+              id="form__outside-option"
+              name="exit-discharge"
+              value="60"
+              required
+            />
+            <label for="form__outside-option"
+              >Exit Discharges to the sidewalk or outside.</label
+            ><br />
+            <input
+              type="radio"
+              id="form__stairs-option"
+              name="exit-discharge"
+              value="40"
+            />
+            <label for="form__stairs-option"
+              >Exit Discharges to stairs or hallways.</label
+            ><br />
+          </div>
+
+          <input type="submit" value="Calculate" />
+        </form>
+        <p id="result" aria-live="polite"></p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
