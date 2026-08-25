@@ -7,7 +7,7 @@
       name="description"
       content="A basic starting page for the Firemen Thing project"
     />
-    <title>Firemen Thing</title>
+    <title>Occupancy Calculator</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -19,16 +19,6 @@
 
       <section id="form">
         <form>
-          <h2 class="form__header">Dimensions:</h2>
-          <div class="form__element">
-            <label for="length">Length:</label>
-            <input type="number" id="length" min="1" required />
-          </div>
-          <div class="form__element">
-            <label for="width">Width:</label>
-            <input type="number" id="width" min="1" required />
-          </div>
-
           <h2 class="form__header">Occupancy Use:</h2>
           <div class="form__element">
             <input
@@ -55,6 +45,33 @@
               value="5"
             />
             <label for="form__standing-option">People only (standing)</label>
+            <h3 class="form__h3">or</h3>
+            <input
+              type="radio"
+              id="form__manual"
+              name="occupancy-use"
+              value="100"
+            />
+            <label for="form__manual">Enter Amount of People:</label>
+            <input
+              type="number"
+              id="form__people"
+              name="form__people"
+              value=""
+              min="1"
+              placeholder="1000"
+              disabled="true"
+            />
+          </div>
+
+          <h2 class="form__header">Dimensions:</h2>
+          <div class="form__element">
+            <label for="length">Length:</label>
+            <input type="number" id="length" min="1" required />
+          </div>
+          <div class="form__element">
+            <label for="width">Width:</label>
+            <input type="number" id="width" min="1" required />
           </div>
 
           <h2 class="form__header">Exit Footage:</h2>
